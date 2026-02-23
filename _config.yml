@@ -1,0 +1,35 @@
+title: Jose Stephen A. Peña
+description: >-
+  Ruby on Rails Developer from Cagayan de Oro City, Philippines.
+  7+ years of full-stack experience building production software for startups and businesses worldwide.
+url: "https://jspenya.github.io"
+baseurl: ""
+
+author:
+  name: Jose Stephen A. Peña
+  email: pena.jstephen@gmail.com
+  github: jspenya
+  linkedin: penajs
+  phone: "+63 967 651 4239"
+  location: Cagayan de Oro City, Philippines
+
+plugins:
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - vendor/

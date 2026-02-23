@@ -1,0 +1,57 @@
+- group: Backend
+  skills:
+    - Ruby on Rails
+    - ASP.NET
+    - PostgreSQL
+    - MySQL
+    - RSpec
+    - Minitest
+    - Capybara
+    - Sidekiq
+    - Resque
+    - ElasticSearch
+
+- group: Frontend
+  skills:
+    - Hotwire / Turbo
+    - Stimulus
+    - Bootstrap
+    - Tailwind CSS
+    - UIKit
+    - ViewComponent
+    - jQuery
+    - ReactJS
+    - HandlebarsJS
+
+- group: Languages
+  skills:
+    - Ruby
+    - JavaScript
+    - TypeScript
+    - CoffeeScript
+    - HTML5
+    - CSS / SCSS
+
+- group: DevOps & Tools
+  skills:
+    - Docker
+    - Git / GitHub
+    - PivotalTracker
+    - Figma
+    - AdobeXD
+
+- group: APIs & Integrations
+  skills:
+    - Stripe
+    - Twilio
+    - HubSpot
+    - W3C Push API
+    - VAPID Auth
+    - Service Workers
+
+- group: Platforms & Frameworks
+  skills:
+    - Jumpstart Pro
+    - Spree Commerce
+    - Remix
+    - Turbo Streams

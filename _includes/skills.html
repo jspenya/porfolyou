@@ -1,0 +1,20 @@
+<section class="skills section" id="skills" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="section__header fade-in">
+      <h2 class="section__title" id="skills-title">Technical <span>Skills</span></h2>
+      <p class="section__subtitle">Technologies and tools I work with</p>
+    </div>
+    <div class="skills__grid" role="list">
+      {% for group in site.data.skills %}
+      <div class="skills__group fade-in" role="listitem">
+        <h3 class="skills__group-title">{{ group.group }}</h3>
+        <div class="skills__tags" aria-label="{{ group.group }} skills">
+          {% for skill in group.skills %}
+          <span class="tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

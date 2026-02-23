@@ -1,0 +1,78 @@
+- company: CleverERP
+  role: Ruby on Rails Developer / Project Manager
+  period: April 2025 – Present
+  url: https://erp.clever-builds.com/
+  url_label: erp.clever-builds.com
+  achievements:
+    - Sole maintainer and developer for the ERP used by Clever Tiny Homes, a manufacturer of tiny homes in America.
+    - Managed feature requests across multiple departments — sales, accounting, manufacturing, and HR.
+    - Built a real-time browser push notification system using the W3C Push API, Service Workers, and VAPID authentication, enabling server-initiated notifications for inspection workflows.
+    - Authored internal developer framework documentation and coding standards for a reusable CRUD table pattern in Rails, standardizing Turbo Stream-driven data tables, offcanvas forms, and pagination across the ERP to reduce boilerplate and enforce consistency.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - Bootstrap
+    - Hotwire
+    - Stimulus
+
+- company: TeamSatchel
+  role: Ruby on Rails Developer
+  period: November 2024 – May 2025
+  url: https://www.teamsatchel.com/products/satchel-one.html
+  url_label: teamsatchel.com
+  achievements:
+    - Helped build and maintain features for Satchel One, a platform supporting 4,500+ schools worldwide, including modules for attendance, assessments, and communication.
+    - Delivered user-focused solutions in a collaborative environment, aligned with TeamSatchel's values of innovation, integrity, and support for educators.
+  tech:
+    - Ruby on Rails
+    - MySQL
+    - Bootstrap
+    - Hotwire
+    - Stimulus
+
+- company: DIS OPC Inc.
+  role: Software Engineer
+  period: December 2021 – December 2024
+  url: https://www.safeboxiq.com/
+  url_label: safeboxiq.com
+  achievements:
+    - Collaborated with a team of five in the development of SafeboxIQ, a document management & workflow tracking system for mortgage lending companies in the U.S.
+    - Delivered product features and bug fixes within 2-week Sprints in an Agile environment.
+    - Built features that support the document submission process, marketed as the main features of the application.
+    - Developed an internal API to seamlessly integrate with an external application, improving document turnaround times and workflow efficiency over the company's previous SDK.
+    - Optimized overall application architecture to promote modularity, scalability, and robustness by adhering to industry-standard coding practices.
+    - Mentored software engineering interns through pair-programming sessions, fostering independent problem-solving skills.
+  tech:
+    - Ruby on Rails
+    - ASP.NET
+    - PostgreSQL
+    - RSpec
+    - Docker
+    - Sidekiq
+    - Bootstrap
+    - jQuery
+    - CoffeeScript
+    - HandlebarsJS
+
+- company: Clinic Dev
+  role: Ruby on Rails Developer
+  period: June 2018 – December 2021
+  url: https://effie.org/
+  url_label: effie.org
+  achievements:
+    - Developed and maintained web applications across 3 different U.S.-based clients as part of an engineering duo.
+    - Worked closely with senior engineers in upgrading Rails legacy apps and addressing technical debt.
+    - Redesigned an existing feature and added functionality allowing an external team to manage content through a token-authenticated API.
+    - Translated UI/UX wireframes from AdobeXD and Figma mock-ups into working code.
+    - Collaborated with project managers and clients to build features, fix bugs, and keep them updated through PivotalTracker.
+    - Effectively managed workload while pursuing educational goals, maintaining a high level of performance in both the workplace and academic studies.
+  tech:
+    - Ruby on Rails
+    - MySQL
+    - UIKit
+    - jQuery
+    - Resque
+    - ElasticSearch
+    - Stripe
+    - Twilio
+    - HubSpot

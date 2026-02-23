@@ -1,0 +1,42 @@
+<section class="experience section" id="experience" aria-labelledby="experience-title">
+  <div class="container">
+    <div class="section__header fade-in">
+      <h2 class="section__title" id="experience-title">Work <span>Experience</span></h2>
+      <p class="section__subtitle">Where I've built things that matter</p>
+    </div>
+
+    <div class="timeline" role="list">
+      {% for job in site.data.experience %}
+      <article class="timeline__item fade-in" role="listitem">
+        <div class="timeline__marker" aria-hidden="true"></div>
+        <div class="timeline__card">
+          <header class="timeline__header">
+            <div>
+              <h3 class="timeline__company">{{ job.company }}</h3>
+              <p class="timeline__role">{{ job.role }}</p>
+              <p class="timeline__period">
+                <span class="timeline__period-icon" aria-hidden="true">◷</span>
+                {{ job.period }}
+              </p>
+            </div>
+            <a href="{{ job.url }}" class="timeline__link" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ job.company }} website">
+              <span>{{ job.url_label }}</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </header>
+          <ul class="timeline__achievements" aria-label="Key achievements">
+            {% for item in job.achievements %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          <div class="timeline__tech" aria-label="Technologies used">
+            {% for tech in job.tech %}
+            <span class="tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

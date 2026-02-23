@@ -1,0 +1,84 @@
+- name: SuperDupr
+  role: Freelance Ruby on Rails Developer
+  duration: 1 yr 3 mos
+  url: https://fueltracker.co.za/
+  description: >-
+    Independently conceptualized, designed, and integrated new feature requests for multiple clients.
+    Systematically identified and refactored code smells, enhancing readability, maintainability, and
+    overall code hygiene. Maintained effective communication channels to understand user needs and
+    continuously improved application functionality based on user interactions.
+  tech:
+    - Ruby on Rails
+    - Jumpstart Pro
+    - PostgreSQL
+    - Minitest
+    - Sidekiq
+    - ViewComponent
+    - Stimulus
+    - Hotwire
+    - Tailwind
+
+- name: Silhouette & Shadow
+  role: Freelance Ruby on Rails Developer
+  duration: 1 yr
+  url: https://silhouetteandshadow.org/
+  description: >-
+    A digital live drawing community where artists can join daily sessions with professional models,
+    connecting with a global network of life-drawing enthusiasts. Collaborated closely with the UI/UX
+    designer, translated wireframes and mock-ups to working code, and developed and maintained the
+    site's frontend and backend for new features and UI/UX redesigns.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - RSpec
+    - Capybara
+    - jQuery
+    - Bootstrap
+    - Sidekiq
+    - Stripe API
+
+- name: Soulbound.gg
+  role: Freelance Frontend Developer
+  duration: 8 mos
+  url: https://soulbound.tv/
+  description: >-
+    A fully interactive livestreaming and entertainment platform for web3 gaming with an in-stream
+    prediction market. Translated UI/UX mockups and designs into a working frontend for an application
+    interface built for a decentralized gaming ecosystem on Ethereum-based NFT games.
+  tech:
+    - Remix
+    - TypeScript
+    - ReactJS
+    - Tailwind
+
+- name: JokePit Ltd.
+  role: Freelance Ruby on Rails Developer
+  duration: 1 yr
+  url: https://www.jokepit.com/
+  description: >-
+    Developed and maintained features for JokePit, an online ticketing platform specializing in comedy,
+    enhancing user experience and streamlining ticket sales for comedians and event organizers.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - RSpec
+    - CoffeeScript
+    - jQuery
+    - Stripe
+
+- name: Cornerstone Team Sports
+  role: Freelance Ruby on Rails Developer
+  duration: 1 yr 5 mos
+  url: https://www.cornerstoneteamsports.com/
+  description: >-
+    An authorized athletic team dealer of Gatorade High School Performance Packages throughout the
+    United States. Focused on optimizing website performance and simplifying backend processes to
+    enhance the overall experience for customers. Collaborated directly with the business owner to
+    introduce new products, resolve bugs, and implement new features.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - Spree
+    - Bootstrap
+    - Hotwire
+    - Stimulus
