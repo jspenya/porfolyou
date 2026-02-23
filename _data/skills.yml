@@ -29,13 +29,11 @@
     - JavaScript
     - TypeScript
     - CoffeeScript
-    - HTML5
-    - CSS / SCSS
 
 - group: DevOps & Tools
   skills:
     - Docker
-    - Git / GitHub
+    - Kamal
     - PivotalTracker
     - Figma
     - AdobeXD
@@ -45,13 +43,10 @@
     - Stripe
     - Twilio
     - HubSpot
-    - W3C Push API
-    - VAPID Auth
-    - Service Workers
+    - WebPush
 
 - group: Platforms & Frameworks
   skills:
     - Jumpstart Pro
     - Spree Commerce
     - Remix
-    - Turbo Streams
