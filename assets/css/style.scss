@@ -758,8 +758,16 @@ a.project-card {
   cursor: pointer;
 }
 
-.solo-builds .project-card__name {
-  margin-bottom: 0.35rem;
+.solo-builds .project-card__external-icon {
+  font-size: 0.9rem;
+  color: var(--c-secondary);
+  transition: color var(--ease), transform var(--ease);
+  flex-shrink: 0;
+}
+
+a.project-card:hover .project-card__external-icon {
+  color: var(--c-primary);
+  transform: translate(2px, -2px);
 }
 
 .solo-builds .project-card__tech {

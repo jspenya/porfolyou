@@ -7,7 +7,10 @@
     <div class="cards-grid" role="list">
       {% for project in site.data.solo_builds %}
       <a href="{{ project.url }}" class="project-card fade-in" role="listitem" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name }}">
-        <h3 class="project-card__name">{{ project.name }}</h3>
+        <div class="project-card__header">
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <span class="project-card__external-icon" aria-hidden="true">↗</span>
+        </div>
         <p class="project-card__role">{{ project.role }}</p>
         <p class="project-card__description">{{ project.description }}</p>
         <div class="project-card__tech" aria-label="Technologies">
