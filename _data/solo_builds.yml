@@ -1,0 +1,26 @@
+- name: Jubilee
+  role: Creator & Developer
+  url: https://jubilee.one-steph-closer.com/
+  description: >-
+    Personal finance tracker for calm monthly check-ins — income, expenses, budgets,
+    and savings in one place, without clutter.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - Hotwire
+    - Stimulus
+    - TailwindCSS
+
+- name: Pickle
+  role: Creator & Developer
+  url: https://pickle.one-steph-closer.com/
+  description: >-
+    Pickleball court finder for Cagayan de Oro. One search across all venues — see open
+    slots for your date and time, then book on the venue site.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - Hotwire
+    - Stimulus
+    - TailwindCSS
+    - Sidekiq

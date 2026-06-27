@@ -716,11 +716,16 @@ a {
 }
 
 /* ============================================================
-   FREELANCE CARDS
+   SOLO BUILDS & FREELANCE CARDS
    ============================================================ */
 
+.solo-builds,
 .freelance {
   background: var(--c-bg);
+}
+
+.solo-builds .project-card__name {
+  margin-bottom: 0.35rem;
 }
 
 .cards-grid {

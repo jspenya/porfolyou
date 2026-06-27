@@ -1,6 +1,21 @@
+- company: ReachBoost
+  role: Ruby on Rails Developer
+  period: April 2026 – Present
+  url: https://www.reachboost.io/
+  url_label: reachboost.io
+  achievements:
+    - Build and maintain the core Rails application powering LinkedIn outreach campaigns for agencies — multi-account management, team collaboration, and whitelabel workflows.
+    - Ship campaign builder and automation sequences that let agencies create and run outreach across multiple LinkedIn accounts at scale.
+    - Integrate LinkedIn account linking compatible with Sales Navigator and LinkedIn Basic, enabling seamless onboarding for agency clients.
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - TailwindCSS
+    - ReactJS
+
 - company: CleverERP
   role: Ruby on Rails Developer / Project Manager
-  period: April 2025 – Present
+  period: April 2025 – April 2026
   url: https://erp.clever-builds.com/
   url_label: erp.clever-builds.com
   achievements:
@@ -30,7 +45,7 @@
     - Hotwire
     - Stimulus
 
-- company: DIS OPC Inc.
+- company: Document Intelligent Solutions OPC Inc.
   role: Software Engineer
   period: December 2021 – December 2024
   url: https://www.safeboxiq.com/
