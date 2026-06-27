@@ -724,10 +724,6 @@ a {
   background: var(--c-bg);
 }
 
-.solo-builds .project-card__name {
-  margin-bottom: 0.35rem;
-}
-
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
