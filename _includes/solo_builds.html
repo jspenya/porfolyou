@@ -6,14 +6,8 @@
     </div>
     <div class="cards-grid" role="list">
       {% for project in site.data.solo_builds %}
-      <article class="project-card fade-in" role="listitem">
-        <div class="project-card__header">
-          <h3 class="project-card__name">{{ project.name }}</h3>
-          <a href="{{ project.url }}" class="timeline__link" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name }}">
-            <span>{{ project.url_label }}</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+      <a href="{{ project.url }}" class="project-card fade-in" role="listitem" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name }}">
+        <h3 class="project-card__name">{{ project.name }}</h3>
         <p class="project-card__role">{{ project.role }}</p>
         <p class="project-card__description">{{ project.description }}</p>
         <div class="project-card__tech" aria-label="Technologies">
@@ -21,10 +15,7 @@
           <span class="tag">{{ tech }}</span>
           {% endfor %}
         </div>
-        <a href="{{ project.url }}" class="project-card__link" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name }}">
-          Visit Site <span aria-hidden="true">↗</span>
-        </a>
-      </article>
+      </a>
       {% endfor %}
     </div>
   </div>

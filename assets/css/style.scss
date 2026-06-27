@@ -752,6 +752,20 @@ a {
   }
 }
 
+a.project-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.solo-builds .project-card__name {
+  margin-bottom: 0.35rem;
+}
+
+.solo-builds .project-card__tech {
+  margin-bottom: 0;
+}
+
 .project-card__header {
   display: flex;
   justify-content: space-between;
