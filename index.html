@@ -1,17 +1,132 @@
 ---
 layout: default
-title: Steph — Ruby on Rails Developer
+title: Steph | Ruby on Rails Developer
 description: >-
-  Ruby on Rails Developer from Cagayan de Oro City, Philippines.
-  7+ years building production software for startups and businesses across the US and beyond.
+  Ruby on Rails developer in Cagayan de Oro helping teams ship dependable products,
+  untangle workflows, and maintain the systems behind them.
 ---
 
-{% include hero.html %}
-{% include experience.html %}
-{% include about.html %}
-{% include solo_builds.html %}
-{% include freelance.html %}
-{% include skills.html %}
-{% include education.html %}
-{% include volunteering.html %}
-{% include contact.html %}
+<div class="portfolio-shell">
+  <aside class="proof-stage" aria-label="Selected project previews">
+    <div class="proof-stage__frame" data-project-stage>
+      <div class="proof-stage__media proof-stage__media--screenshots is-active" data-stage-media="reachboost">
+        <a href="{{ '/assets/reachboost-product.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View ReachBoost dashboard screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/reachboost-product.png' | relative_url }}" width="1705" height="1289" alt="ReachBoost dashboard with outreach statistics, active campaigns, and sales pipeline" fetchpriority="high">
+        </a>
+        <a href="{{ '/assets/reachboost-sequence.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View ReachBoost campaign builder screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/reachboost-sequence.png' | relative_url }}" width="2139" height="1195" alt="ReachBoost campaign sequence builder with branching email and LinkedIn outreach steps">
+        </a>
+        <a href="{{ '/assets/reachboost-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View ReachBoost homepage screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/reachboost-public.png' | relative_url }}" width="1748" height="1181" alt="ReachBoost homepage presenting its centralized outbound platform for agencies">
+        </a>
+      </div>
+      <div class="proof-stage__media proof-stage__media--screenshots" data-stage-media="jubilee">
+        <a href="{{ '/assets/jubilee-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View Jubilee sign-in screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/jubilee-public.png' | relative_url }}" width="1720" height="1258" alt="Jubilee sign-in screen with calm personal finance messaging">
+        </a>
+        <a href="{{ '/assets/jubilee-transactions.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View Jubilee transactions screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/jubilee-transactions.png' | relative_url }}" width="1783" height="1140" alt="Jubilee transaction ledger showing income, expenses, and balances across accounts">
+        </a>
+        <a href="{{ '/assets/jubilee-breakdown.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View Jubilee expense breakdown screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/jubilee-breakdown.png' | relative_url }}" width="1801" height="1148" alt="Jubilee monthly expense breakdown with a category chart and spending totals">
+        </a>
+      </div>
+
+      <div class="proof-stage__controls" aria-label="Choose project preview">
+        <button type="button" class="proof-stage__control is-active" data-stage-control="reachboost" aria-pressed="true">ReachBoost</button>
+        <button type="button" class="proof-stage__control" data-stage-control="jubilee" aria-pressed="false">Jubilee</button>
+      </div>
+      <p class="proof-stage__caption" aria-live="polite" data-stage-caption>Agency outreach product · Rails developer</p>
+      <span class="proof-stage__cat" aria-label="Two cats supervise the work">
+        <svg viewBox="0 0 64 48" aria-hidden="true"><path d="M11 20 15 5l13 8c2-.4 6-.4 8 0l13-8 4 15v10c0 10-9 17-21 17S11 40 11 30V20Z" fill="currentColor"/><path d="M22 27h2M40 27h2M27 35c3 2 7 2 10 0" fill="none" stroke="#ff7a1f" stroke-width="3" stroke-linecap="round"/></svg>
+      </span>
+    </div>
+  </aside>
+
+  <div class="portfolio-story">
+    {% include hero.html %}
+
+    <section class="work section-block" id="work" aria-labelledby="work-title">
+      <header class="section-heading" data-reveal>
+        <h2 id="work-title">Selected work</h2>
+        <p>Two products that show how I think, build, and stay with the work.</p>
+      </header>
+
+      <article class="case-study" id="reachboost" data-project="reachboost" data-reveal>
+        <div class="case-study__heading">
+          <h3>ReachBoost</h3>
+          <p>Rails developer · 2026 to present</p>
+        </div>
+        <p class="case-study__claim">Agency outbound has a lot of moving parts. I help make them feel like one product.</p>
+        <p>I build and maintain the Rails application behind multi-account campaigns, team collaboration, whitelabel workflows, and LinkedIn account onboarding.</p>
+        <ul class="plain-list">
+          <li>Campaign builder and automated outreach sequences</li>
+          <li>Multi-client account and sender management</li>
+          <li>Sales Navigator and LinkedIn Basic account linking</li>
+        </ul>
+        <a href="https://reachboost.io/" target="_blank" rel="noopener noreferrer">Visit ReachBoost</a>
+      </article>
+
+      <article class="case-study case-study--light" id="jubilee" data-project="jubilee" data-reveal>
+        <div class="case-study__heading">
+          <h3>Jubilee</h3>
+          <p>Creator and developer</p>
+        </div>
+        <p class="case-study__claim">Personal finance software should lower the temperature, not add more noise.</p>
+        <p>I designed, built, and deployed Jubilee for calm monthly check-ins across income, expenses, budgets, and savings.</p>
+        <ul class="plain-list">
+          <li>Ruby on Rails with Hotwire and Stimulus</li>
+          <li>Product direction, interface design, and deployment</li>
+          <li>A deliberately quiet workflow for recurring money decisions</li>
+        </ul>
+        <a href="https://jubilee.one-steph-closer.com/" target="_blank" rel="noopener noreferrer">Open Jubilee</a>
+      </article>
+    </section>
+
+    <section class="letter section-block" id="approach" aria-labelledby="approach-title">
+      <h2 id="approach-title">How I work</h2>
+        <div class="letter__body">
+          <p class="letter__greeting">Dear reader,</p>
+          <p>I’m Steph, a husband, a cat dad to two, and a Rails developer. After more than eight years of building software, I’m still learning what it means to work with care.</p>
+          <p>I used to think mostly about what work did for me: my experience, my next opportunity, my paycheck. I’m grateful it provides for my family. But I’m learning to ask, <em>how can I help this business grow, and am I putting love into what I build?</em></p>
+          <p>In a story <a href="https://fromthegreennotebook.com/2017/11/04/the-janitor-who-help-put-a-man-on-the-moon/">retold by Joe Byerly</a>, President Kennedy asks a NASA janitor what he does. “I’m helping put a man on the moon,” he replies. I love that perspective. Even fixing a stubborn bug or simplifying a workflow can help someone do the work that matters to them.</p>
+          <p>Following Jesus keeps bringing me back to this:</p>
+          <blockquote class="letter__verse">
+            <p>“If I have the gift of prophecy and can fathom all mysteries and all knowledge, and if I have a faith that can move mountains, but do not have love, I am nothing.”</p>
+            <cite><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2013%3A2&amp;version=NIV">1 Corinthians 13:2 NIV</a></cite>
+          </blockquote>
+          <p>God comes first, then my family, then my career. I’m learning to keep that order while bringing love and care to the work entrusted to me.</p>
+          <p class="letter__signoff">Blessings,<br><span class="letter__signature">Steph</span></p>
+          <p class="letter__postscript">P.S. I’m open to remote freelance work worldwide. <a href="#contact">Tell me what you’re building.</a></p>
+      </div>
+    </section>
+
+    <section class="background section-block" id="background" aria-labelledby="background-title">
+      <header class="section-heading" data-reveal>
+        <h2 id="background-title">The long view</h2>
+        <p>Production Rails work across agencies, education, lending, manufacturing, and independent products.</p>
+      </header>
+
+      <div class="career-list" role="list" data-reveal>
+        {%- for job in site.data.experience %}
+        <a class="career-list__row" href="{{ job.url }}" target="_blank" rel="noopener noreferrer" role="listitem">
+          <span><strong>{{ job.company }}</strong><small>{{ job.role }}</small></span>
+          <span>{{ job.period }}</span>
+        </a>
+        {%- endfor %}
+      </div>
+
+      <div class="capabilities" data-reveal>
+        <h3>What I bring</h3>
+        <ul class="capabilities__list">
+          <li><span>Product delivery</span><strong>From unclear request to shipped workflow</strong></li>
+          <li><span>Rails systems</span><strong>Hotwire, PostgreSQL, jobs, APIs, tests</strong></li>
+          <li><span>Stewardship</span><strong>Maintenance, upgrades, documentation, mentoring</strong></li>
+          <li><span>Collaboration</span><strong>Direct communication with clients and teams</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    {% include contact.html %}
+  </div>
+</div>
