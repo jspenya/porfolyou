@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | Steph Peña</title>
+  <meta name="description" content="Software engineer specializing in Ruby on Rails. Experience, skills, freelance work, and education of Jose Stephen A. Peña.">
+  <link rel="icon" href="{{ '/favicon.png' | relative_url }}?v=charcoal-butter" type="image/png">
+  <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+</head>
+<body>
+  <nav class="resume-toolbar" aria-label="Résumé actions">
+    <a href="{{ '/' | relative_url }}">back to portfolio</a>
+    <button type="button" onclick="window.print()">print / save as pdf</button>
+  </nav>
+  <main class="resume-sheet">{{ content }}</main>
+</body>
+</html>

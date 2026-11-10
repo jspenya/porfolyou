@@ -1,0 +1,61 @@
+---
+layout: resume
+title: Résumé
+permalink: /resume/
+---
+<header class="resume-header">
+  <h1>Jose Stephen A. Peña</h1>
+  <p class="resume-title">Software Engineer · Ruby on Rails</p>
+  <p>Cagayan de Oro City, Philippines</p>
+  <ul class="contact-links" aria-label="Contact details">
+    <li><a href="mailto:pena.jstephen@gmail.com">pena.jstephen@gmail.com</a></li>
+    <li><a href="tel:+639676514239">+63 967 651 4239</a></li>
+    <li><a href="https://github.com/jspenya">github.com/jspenya</a></li>
+    <li><a href="https://www.linkedin.com/in/penajs/">linkedin.com/in/penajs</a></li>
+  </ul>
+</header>
+<section aria-labelledby="summary-title">
+  <h2 id="summary-title">Summary</h2>
+  <p>Software engineer building and maintaining Ruby on Rails applications since 2018. My work spans outreach tools, manufacturing, education, mortgage workflows, and independent products. I care about useful features, maintainable code, and the people using what I build. A follower of Christ, I value integrity, curiosity, and steady, meaningful growth.</p>
+</section>
+<section aria-labelledby="skills-title">
+  <h2 id="skills-title">Core skills</h2>
+  <dl class="skills">
+    <div><dt>Backend</dt><dd>Ruby on Rails, PostgreSQL, MySQL, APIs, Sidekiq</dd></div>
+    <div><dt>Frontend</dt><dd>Hotwire, Turbo, Stimulus, JavaScript, React, TypeScript, Tailwind CSS, Bootstrap</dd></div>
+    <div><dt>Testing & tools</dt><dd>RSpec, Minitest, Capybara, Docker, Git</dd></div>
+    <div><dt>Working with teams</dt><dd>Full-stack feature delivery, maintenance, performance, code quality, mentoring, requirements gathering</dd></div>
+  </dl>
+</section>
+<section aria-labelledby="experience-title">
+  <h2 id="experience-title">Experience</h2>
+  {% for job in site.data.experience %}
+  <article class="resume-job">
+    <h3><a href="{{ job.url }}">{{ job.company }}</a></h3>
+    <div class="job-meta"><p class="job-role">{{ job.role }}</p><p>{{ job.period }}</p></div>
+    <ul>{% for achievement in job.achievements %}<li>{{ achievement }}</li>{% endfor %}</ul>
+    <p class="tools"><strong>Tools:</strong> {{ job.tech | join: ', ' }}</p>
+  </article>
+  {% endfor %}
+</section>
+<section aria-labelledby="freelance-title">
+  <h2 id="freelance-title">Freelance work</h2>
+  {% for job in site.data.freelance %}
+  <article class="resume-job">
+    <h3><a href="{{ job.url }}">{{ job.name }}</a></h3>
+    <div class="job-meta"><p class="job-role">{{ job.role }}</p><p>{{ job.duration }}</p></div>
+    <p>{{ job.description }}</p>
+    <p class="tools"><strong>Tools:</strong> {{ job.tech | join: ', ' }}</p>
+  </article>
+  {% endfor %}
+</section>
+<section aria-labelledby="education-title">
+  <h2 id="education-title">Education</h2>
+  <h3>Xavier University – Ateneo de Cagayan</h3>
+  <p>Bachelor of Science in Information Technology · 2018–2023</p>
+</section>
+<section aria-labelledby="volunteering-title">
+  <h2 id="volunteering-title">Volunteering</h2>
+  <h3><a href="https://indigitous.org/">Indigitous</a> · Digital Gospeler</h3>
+  <p>Collaborated with a team on digital strategies for sharing the Gospel, including online outreach and connecting with people through social media.</p>
+</section>

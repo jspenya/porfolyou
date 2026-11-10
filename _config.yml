@@ -32,3 +32,7 @@ exclude:
   - README.md
   - .gitignore
   - vendor/
+
+  - PRODUCT.md
+  - DESIGN.md
+  - CONTEXT.md

@@ -1,4 +1,8 @@
 - company: ReachBoost
+  description: >-
+    reachboost helps agencies manage their outbound outreach. i work across the full stack,
+    building new features and looking after what’s already there. i care about keeping the
+    code in good shape, the pages fast, and the people using them happy.
   role: Ruby on Rails Developer
   period: April 2026 – Present
   url: https://www.reachboost.io/
@@ -14,6 +18,11 @@
     - ReactJS
 
 - company: CleverERP
+  description: >-
+    clever builds makes tiny homes in the u.s., and clevererp helps keep the day-to-day work
+    moving. i maintained the app that followed materials from inventory into a home, and
+    the home through to delivery. i also worked on the tools for tracking worker performance,
+    costs, and purchase requests.
   role: Ruby on Rails Developer / Project Manager
   period: April 2025 – April 2026
   url: https://erp.clever-builds.com/
@@ -31,6 +40,10 @@
     - Stimulus
 
 - company: TeamSatchel
+  description: >-
+    i worked on satchel one, a learning and school management platform. we built features
+    to help teachers follow students’ progress, understand behaviour, and keep up with
+    the everyday needs of their schools.
   role: Ruby on Rails Developer
   period: November 2024 – May 2025
   url: https://www.teamsatchel.com/products/satchel-one.html
@@ -46,6 +59,10 @@
     - Stimulus
 
 - company: Document Intelligent Solutions OPC Inc.
+  description: >-
+    i worked on safeboxiq, a digital mortgage platform that helps lending teams make sense
+    of the documents and information behind a mortgage application. my part was building
+    features that helped them move applications along and better serve their customers.
   role: Software Engineer
   period: December 2021 – December 2024
   url: https://www.safeboxiq.com/
@@ -70,6 +87,10 @@
     - HandlebarsJS
 
 - company: Clinic Dev
+  description: >-
+    my first tech gig, and where i started learning the craft. i worked on effie.org,
+    a library of marketing ideas and case studies. building features, fixing bugs, and
+    learning from more experienced developers gave me my foundation.
   role: Ruby on Rails Developer
   period: June 2018 – December 2021
   url: https://effie.org/
