@@ -1,0 +1,58 @@
+---
+layout: default
+title: Projects
+portfolio_section: projects
+description: "Selected Ruby on Rails projects: ReachBoost and Jubilee."
+permalink: /projects/
+---
+<div class="portfolio-story">
+  {% include hero.html %}
+  <div class="portfolio-browser">
+    {% include browse-nav.html %}
+    <section class="projects section-block" id="projects" aria-labelledby="projects-title">
+      <header class="section-heading" data-reveal>
+        <h2 id="projects-title">projects</h2>
+      </header>
+
+      <article class="case-study" id="reachboost" data-project="reachboost" data-reveal>
+        <a class="project-image" href="{{ '/assets/reachboost-sequence.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View reachboost screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/reachboost-sequence.png' | relative_url }}" width="2139" height="1195" alt="ReachBoost campaign builder with branching outreach steps" fetchpriority="high">
+        </a>
+        <div class="case-study__heading">
+          <h3>ReachBoost</h3>
+          <p>Rails developer · 2026 to present</p>
+        </div>
+        <p class="case-study__claim">Agency outbound has a lot of moving parts. I help make them feel like one product.</p>
+        <p>I build and maintain the Rails application behind multi-account campaigns, team collaboration, whitelabel workflows, and LinkedIn account onboarding.</p>
+        <ul class="plain-list">
+          <li>Campaign builder and automated outreach sequences</li>
+          <li>Multi-client account and sender management</li>
+          <li>Sales Navigator and LinkedIn Basic account linking</li>
+        </ul>
+        <p class="project-more">more views: <a href="{{ '/assets/reachboost-product.png' | relative_url }}" target="_blank" rel="noopener noreferrer">dashboard</a> · <a href="{{ '/assets/reachboost-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer">homepage</a></p>
+        <a href="https://reachboost.io/" target="_blank" rel="noopener noreferrer">visit reachboost</a>
+      </article>
+
+      <article class="case-study case-study--light" id="jubilee" data-project="jubilee" data-reveal>
+        <a class="project-image" href="{{ '/assets/jubilee-transactions.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View jubilee screenshot in full size (opens in a new tab)">
+          <img src="{{ '/assets/jubilee-transactions.png' | relative_url }}" width="1783" height="1140" alt="Jubilee transaction ledger with income, expenses, and account balances" loading="lazy">
+        </a>
+        <div class="case-study__heading">
+          <h3>Jubilee</h3>
+          <p>Creator and developer</p>
+        </div>
+        <p class="case-study__claim">Personal finance software should lower the temperature, not add more noise.</p>
+        <p>i built jubilee because i wanted to know where my money was going—what was quietly adding up, where i was spending too much, and what i could do differently. having a clearer picture of my finances helps me be wiser with what i have.</p>
+        <ul class="plain-list">
+          <li>Ruby on Rails with Hotwire and Stimulus</li>
+          <li>Product direction, interface design, and deployment</li>
+          <li>A deliberately quiet workflow for recurring money decisions</li>
+        </ul>
+        <p class="project-more">more views: <a href="{{ '/assets/jubilee-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer">sign-in</a> · <a href="{{ '/assets/jubilee-breakdown.png' | relative_url }}" target="_blank" rel="noopener noreferrer">expense breakdown</a></p>
+        <a href="https://jubilee.one-steph-closer.com/" target="_blank" rel="noopener noreferrer">open jubilee</a>
+      </article>
+    </section>
+
+  </div>
+  <div class="study-end"><a href="{{ '/' | relative_url }}#case-studies">explore the case studies</a><a href="{{ '/' | relative_url }}#contact">talk about a project</a></div>
+</div>

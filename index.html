@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Steph | Ruby on Rails Developer
+portfolio_section: case-studies
 description: >-
   Ruby on Rails developer in Cagayan de Oro helping teams ship dependable products,
   untangle workflows, and maintain the systems behind them.
@@ -9,66 +10,31 @@ description: >-
 <div class="portfolio-story">
     {% include hero.html %}
 
-    <section class="work section-block" id="work" aria-labelledby="work-title">
-      <header class="section-heading" data-reveal>
-        <h2 id="work-title">selected work</h2>
-      </header>
-
-      <article class="case-study" id="reachboost" data-project="reachboost" data-reveal>
-        <a class="project-image" href="{{ '/assets/reachboost-sequence.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View reachboost screenshot in full size (opens in a new tab)">
-          <img src="{{ '/assets/reachboost-sequence.png' | relative_url }}" width="2139" height="1195" alt="ReachBoost campaign builder with branching outreach steps" fetchpriority="high">
-        </a>
-        <div class="case-study__heading">
-          <h3>ReachBoost</h3>
-          <p>Rails developer · 2026 to present</p>
-        </div>
-        <p class="case-study__claim">Agency outbound has a lot of moving parts. I help make them feel like one product.</p>
-        <p>I build and maintain the Rails application behind multi-account campaigns, team collaboration, whitelabel workflows, and LinkedIn account onboarding.</p>
-        <ul class="plain-list">
-          <li>Campaign builder and automated outreach sequences</li>
-          <li>Multi-client account and sender management</li>
-          <li>Sales Navigator and LinkedIn Basic account linking</li>
-        </ul>
-        <p class="project-more">more views: <a href="{{ '/assets/reachboost-product.png' | relative_url }}" target="_blank" rel="noopener noreferrer">dashboard</a> · <a href="{{ '/assets/reachboost-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer">homepage</a></p>
-        <a href="https://reachboost.io/" target="_blank" rel="noopener noreferrer">visit reachboost</a>
-      </article>
-
-      <article class="case-study case-study--light" id="jubilee" data-project="jubilee" data-reveal>
-        <a class="project-image" href="{{ '/assets/jubilee-transactions.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View jubilee screenshot in full size (opens in a new tab)">
-          <img src="{{ '/assets/jubilee-transactions.png' | relative_url }}" width="1783" height="1140" alt="Jubilee transaction ledger with income, expenses, and account balances" loading="lazy">
-        </a>
-        <div class="case-study__heading">
-          <h3>Jubilee</h3>
-          <p>Creator and developer</p>
-        </div>
-        <p class="case-study__claim">Personal finance software should lower the temperature, not add more noise.</p>
-        <p>i built jubilee because i wanted to know where my money was going—what was quietly adding up, where i was spending too much, and what i could do differently. having a clearer picture of my finances helps me be wiser with what i have.</p>
-        <ul class="plain-list">
-          <li>Ruby on Rails with Hotwire and Stimulus</li>
-          <li>Product direction, interface design, and deployment</li>
-          <li>A deliberately quiet workflow for recurring money decisions</li>
-        </ul>
-        <p class="project-more">more views: <a href="{{ '/assets/jubilee-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer">sign-in</a> · <a href="{{ '/assets/jubilee-breakdown.png' | relative_url }}" target="_blank" rel="noopener noreferrer">expense breakdown</a></p>
-        <a href="https://jubilee.one-steph-closer.com/" target="_blank" rel="noopener noreferrer">open jubilee</a>
-      </article>
-    </section>
-
+    <div class="portfolio-browser">
+      {% include browse-nav.html %}
     <section class="case-studies section-block" id="case-studies" aria-labelledby="case-studies-title">
       <header class="section-heading">
         <h2 id="case-studies-title">case studies</h2>
         <p>A closer look at the problems, decisions, and workflows behind my work.</p>
       </header>
-      <article class="case-study">
+      <article class="case-study study-preview" aria-labelledby="cornerstone-title">
         <div class="case-study__heading">
-          <h3>from product to instagram post</h3>
+          <h3 id="cornerstone-title"><a href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}">from product to instagram post</a></h3>
           <p>Cornerstone · AI &amp; ecommerce</p>
         </div>
+        <figure class="study-example">
+          <a class="project-image" href="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View Cornerstone’s preseason Instagram post in full size (opens in a new tab)">
+            <img src="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" width="1643" height="1022" alt="Cornerstone’s published Instagram post showing Gatorade products beside a football field, with its caption alongside." fetchpriority="high" decoding="async">
+          </a>
+          <figcaption><span>From the product catalog to a published Instagram post.</span></figcaption>
+        </figure>
         <p class="case-study__claim">A creative brief in. A product image and caption ready for review.</p>
         <p>I built a workflow inside Cornerstone’s ecommerce admin that generates Instagram content from the product catalog, gives the team control over the final draft, and publishes through Meta’s API.</p>
-        <p class="study-summary">Product context → AI image &amp; caption → human review → Instagram</p>
         <a href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}">read the cornerstone case study <span aria-hidden="true">→</span></a>
       </article>
     </section>
+
+    </div>
 
     <section class="letter section-block" id="approach" aria-labelledby="approach-title">
       <h2 id="approach-title">a little about me</h2>

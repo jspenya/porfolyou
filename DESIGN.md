@@ -83,7 +83,7 @@ This document records the implemented stylesheet and current Jekyll templates. I
 **Key Characteristics:**
 - Warm butter paper with charcoal text and restrained olive links.
 - Light serif headings paired with clear sans-serif prose.
-- One centered reading column with generous vertical rhythm.
+- A centered page with generous vertical rhythm and a quiet category rail on browse pages.
 - Real project screenshots, subtle rules, and no decorative elevation.
 
 ## Colors
@@ -106,7 +106,9 @@ The display, headline, and title roles map to h1, h2, and h3. Headings use balan
 
 ## Layout
 
-Navigation, main content, and footer share a centered maximum width of 980px. Their width is `min(980px, calc(100% - var(--gutter) * 2))`. The fluid gutter and section tokens above preserve breathing room across viewports. No permanent project sidebar is present.
+Navigation, main content, and footer share a centered maximum width of 980px. Their width is `min(980px, calc(100% - var(--gutter) * 2))`. The fluid gutter and section tokens above preserve breathing room across viewports. No permanent project showcase sidebar is present. The approved browse-page category navigation is ordinary document flow, never fixed or sticky.
+
+Home and `/projects/` share the introduction above a two-column browse area: a 160px category rail, a 48px gap, and the remaining width for content. Home presents case studies; selected work lives on `/projects/`. At **800px and below**, this area becomes one column with a 32px gap; category links wrap horizontally above a fine bottom rule. The header also stacks at this breakpoint. These pages retain the charcoal & butter identity while adopting the approved Joseph Rex-inspired landing composition.
 
 The introduction has fluid top padding (`clamp(48px, 6vw, 72px)`) and 48px below. Prose measures remain bounded: introduction paragraphs at 72ch, case-study text and the personal letter at 70ch, section introductions at 65ch. Standard paragraphs use the paragraph token; letter paragraphs use the slightly looser letter-paragraph token. The personal signoff has 36px above it.
 
@@ -128,7 +130,9 @@ Fine 1px rules define boundaries. Screenshot frames have the image radius and cl
 
 ### Navigation
 
-An understated serif name anchors the left edge, with three plain text links on the right. Navigation uses charcoal text; hovering underlines a link. A bottom rule closes the header. Desktop padding is 24px vertically; mobile padding is 22px above and 16px below.
+An understated serif name anchors the left edge. Browse-page headers show résumé and say hello links; detail-page headers retain projects, case studies, and a little about me alongside them. Navigation uses charcoal text; hovering underlines a link. A bottom rule closes the header. Desktop padding is 24px vertically; mobile padding is 22px above and 16px below.
+
+Category navigation offers case studies, projects, and about me. Links are muted at rest; hover changes them to charcoal and underlines them. The current page is charcoal, underlined, and weight 500, with `aria-current="page"`. It uses the shared visible keyboard focus treatment.
 
 ### Project frame and heading
 
@@ -159,6 +163,6 @@ Links are underlined by default with a 5px underline offset and 1px thickness; h
 - Do keep lowercase headings and a casual, personal voice.
 
 ### Don't:
-- Don't restore the cat identity or permanent project showcase sidebar.
+- Don't restore the cat identity or permanent project showcase sidebar; ordinary, nonsticky category navigation is approved.
 - Don't add shadows or decorative cards to plain prose sections.
 - Don't turn the warm, quiet palette into a collection of competing accent colors.

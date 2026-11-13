@@ -113,9 +113,12 @@ button { cursor: pointer; }
 // Case studies share the portfolio’s existing type, color, and spacing tokens.
 .case-studies { border-top: 1px solid var(--line); padding-top: 48px; }
 .case-studies .case-study { padding-bottom: 0; }
-.study-summary { border-block: 1px solid var(--line); padding-block: 20px; color: var(--muted); }
+.study-preview .case-study__heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+.study-preview h3 a { color: var(--ink); text-decoration: none; }
+.study-preview h3 a:hover { text-decoration: underline; }
+.study-preview .study-example { margin-block: 24px 28px; }
 .study-detail { padding-top: clamp(36px, 6vw, 64px); }
-.study-intro { max-width: 70ch; }
+.study-intro { max-width: 760px; margin-inline: auto; }
 .study-eyebrow { margin-block: 40px 16px; color: var(--muted); font-size: 15px; }
 .study-facts { margin: 36px 0 0; padding-block: 24px; border-block: 1px solid var(--line); }
 .study-facts > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; }
@@ -123,7 +126,7 @@ button { cursor: pointer; }
 .study-facts dt { color: var(--muted); font-size: 15px; }
 .study-facts dd { margin: 0; }
 .study-section { margin-top: 64px; }
-.study-section > p { max-width: 70ch; }
+.study-section > p, .study-section > h2, .study-section > h3 { width: min(100%, 760px); margin-inline: auto; }
 .study-section h3 { font-size: clamp(24px, 2.5vw, 28px); margin-top: 36px; }
 .study-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; counter-reset: workflow; padding: 0; margin: 32px 0; border-block: 1px solid var(--line); }
 .study-flow li { counter-increment: workflow; margin: 0; padding: 24px 20px; border-left: 1px solid var(--line); }
@@ -131,7 +134,7 @@ button { cursor: pointer; }
 .study-flow li::before { content: counter(workflow, decimal-leading-zero); display: block; color: var(--muted); font-size: 15px; margin-bottom: 16px; }
 .study-flow strong { display: block; font-weight: 500; margin-bottom: 8px; }
 .study-flow span { display: block; font-size: 15px; }
-.study-end { display: flex; flex-wrap: wrap; gap: 20px 40px; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
+.study-end { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; max-width: 760px; margin: 64px auto 0; padding-top: 24px; border-top: 1px solid var(--line); }
 @media (max-width: 800px) {
   .nav { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
@@ -149,3 +152,20 @@ button { cursor: pointer; }
 .study-example .project-image { margin-bottom: 12px; }
 .study-example figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 15px; }
 .study-example figcaption > span { color: var(--muted); }
+
+// Shared introduction and category navigation for the portfolio's browse pages.
+.portfolio-browser { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 48px; align-items: start; }
+.browse-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 4px; }
+.browse-nav a { padding-block: 8px; color: var(--muted); text-decoration: none; }
+.browse-nav a:hover { color: var(--ink); text-decoration: underline; }
+.browse-nav a[aria-current] { color: var(--ink); font-weight: 500; text-decoration: underline; }
+.portfolio-browser > .section-block { margin-top: 0; padding-top: 0; border-top: 0; min-width: 0; }
+.portfolio-browser .section-heading { margin-bottom: 32px; }
+.portfolio-browser .section-heading h2 { margin-bottom: 16px; }
+.portfolio-browser .section-heading p { margin-bottom: 0; }
+.projects .case-study__heading { flex-direction: column; align-items: flex-start; gap: 8px; }
+.projects .case-study:last-child { padding-bottom: 0; }
+@media (max-width: 800px) {
+  .portfolio-browser { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .browse-nav { flex-direction: row; flex-wrap: wrap; gap: 8px 24px; padding-block: 0 16px; border-bottom: 1px solid var(--line); }
+}

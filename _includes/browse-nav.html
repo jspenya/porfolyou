@@ -1,0 +1,5 @@
+<nav class="browse-nav" aria-label="Explore the portfolio">
+  <a href="{{ '/' | relative_url }}#case-studies"{% if page.portfolio_section == 'case-studies' %} aria-current="page"{% endif %}>case studies</a>
+  <a href="{{ '/projects/' | relative_url }}"{% if page.portfolio_section == 'projects' %} aria-current="page"{% endif %}>projects</a>
+  <a href="{{ '/' | relative_url }}#approach">about me</a>
+</nav>
