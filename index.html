@@ -13,25 +13,25 @@ description: >-
     <div class="portfolio-browser">
       {% include browse-nav.html %}
     <section class="case-studies section-block" id="case-studies" aria-labelledby="case-studies-title">
-      <header class="section-heading">
-        <h2 id="case-studies-title">case studies</h2>
-        <p>A closer look at the problems, decisions, and workflows behind my work.</p>
-      </header>
-      <article class="case-study study-preview" aria-labelledby="cornerstone-title">
-        <div class="case-study__heading">
-          <h3 id="cornerstone-title"><a href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}">from product to instagram post</a></h3>
-          <p>Cornerstone · AI &amp; ecommerce</p>
-        </div>
-        <figure class="study-example">
-          <a class="project-image" href="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View Cornerstone’s preseason Instagram post in full size (opens in a new tab)">
-            <img src="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" width="1643" height="1022" alt="Cornerstone’s published Instagram post showing Gatorade products beside a football field, with its caption alongside." fetchpriority="high" decoding="async">
+      <h2 id="case-studies-title" class="sr-only">case studies</h2>
+      <div class="study-grid">
+        <article class="study-card" aria-labelledby="cornerstone-title">
+          <h3 id="cornerstone-title"><a href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}">cornerstone</a></h3>
+          <a class="study-card__image" href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}" aria-label="Read the Cornerstone case study">
+            <img src="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" width="1643" height="1022" alt="Cornerstone’s published Instagram post featuring Gatorade products beside a football field." fetchpriority="high" decoding="async">
           </a>
-          <figcaption><span>From the product catalog to a published Instagram post.</span></figcaption>
-        </figure>
-        <p class="case-study__claim">A creative brief in. A product image and caption ready for review.</p>
-        <p>I built a workflow inside Cornerstone’s ecommerce admin that generates Instagram content from the product catalog, gives the team control over the final draft, and publishes through Meta’s API.</p>
-        <a href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}">read the cornerstone case study <span aria-hidden="true">→</span></a>
-      </article>
+          <p>I built a workflow that turns catalog products into Instagram images and captions, with room to review the draft before publishing.</p>
+          <a class="study-card__link" href="{{ '/case-studies/cornerstone-instagram/' | relative_url }}">read case study <span class="sr-only">about Cornerstone</span><span aria-hidden="true"> →</span></a>
+        </article>
+        <article class="study-card" aria-labelledby="vkids-title">
+          <h3 id="vkids-title"><a href="{{ '/case-studies/vkids/' | relative_url }}">vkids</a></h3>
+          <a class="study-card__image" href="{{ '/case-studies/vkids/' | relative_url }}" aria-label="Read the vkids case study">
+            <img src="{{ '/assets/case-studies/vkids/release-verification.png' | relative_url }}" width="1280" height="987" alt="vkids pickup verification screen showing a sample child’s claim code and authorized guardian. Local demo data." loading="lazy" decoding="async">
+          </a>
+          <p>I built VKids for Victory Christian Fellowship - Cagayan de Oro church, connecting family check-in and claim codes with a volunteer-verified pickup.</p>
+          <a class="study-card__link" href="{{ '/case-studies/vkids/' | relative_url }}">read case study <span class="sr-only">about vkids</span><span aria-hidden="true"> →</span></a>
+        </article>
+      </div>
     </section>
 
     </div>

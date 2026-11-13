@@ -37,7 +37,7 @@ Keep these sections in order. Adapt their headings and length to the project; th
 
 1. Create `case-studies/<slug>.html` with Jekyll frontmatter: `layout: default`, a descriptive `title`, a concise `description`, and `permalink: /case-studies/<slug>/`.
 2. Build the page using the structure above and the reference page’s semantic markup. Give section headings unique IDs and connect each section with `aria-labelledby`.
-3. Add a summary entry to the homepage’s `#case-studies` section: project title, brief context, outcome-focused summary, and a descriptive link to the full story. Keep the existing navigation destination.
+3. Add a summary entry to the homepage’s `#case-studies` section: project title, brief context, outcome-focused summary, and a descriptive link to the full story. Use the homepage’s compact `study-grid` / `study-card` presentation: project name, an uncropped preview linking to the story, one short summary, and a descriptive read link. Full-size screenshot links and captions belong on the detail page. Keep the existing navigation destination.
 4. Use Jekyll’s `relative_url` filter for local assets and internal links. From a detail page, link back to homepage anchors using the homepage URL, rather than a fragment alone.
 5. Verify the result before presenting it: Jekyll builds successfully; every image loads; screenshot links open the intended full-size file; public links match their examples; homepage/detail/contact navigation works; desktop and mobile layouts have no horizontal overflow. The reference was checked at 1280, 768, 390, and 320 pixels.
 6. Present a local preview and report edits, commits, pushes, and deployments as separate states. Follow the project’s publication authorization rules.

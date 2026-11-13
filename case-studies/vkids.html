@@ -1,0 +1,87 @@
+---
+layout: default
+title: "vkids: from check-in to pickup"
+description: "A Kids Church workflow for Victory Christian Fellowship - Cagayan de Oro church: family check-in, age-based classrooms, claim codes, and a human-verified pickup."
+permalink: /case-studies/vkids/
+---
+<article class="study-detail">
+  <header class="study-intro">
+    <a href="{{ '/' | relative_url }}#case-studies">← all case studies</a>
+    <p class="study-eyebrow">vkids · Kids Church check-in &amp; pickup</p>
+    <h1>from check-in to pickup</h1>
+    <p class="hero__summary">I built VKids for Victory Christian Fellowship - Cagayan de Oro church, helping families check their children into Kids Church and giving volunteers a clear handoff at pickup.</p>
+    <dl class="study-facts">
+      <div><dt>my contribution</dt><dd>Rails application, guardian check-in, volunteer workflows, and release safeguards</dd></div>
+      <div><dt>built with</dt><dd>Ruby on Rails, PostgreSQL, Hotwire, Tailwind CSS, Active Job, Web Push</dd></div>
+    </dl>
+  </header>
+
+  <section class="study-section" aria-labelledby="examples-title">
+    <h2 id="examples-title">a claim code to carry through pickup</h2>
+    <p>After check-in, the guardian has a code for each Pre-school or Primary child, their classroom, and the people allowed to pick them up. They can reopen this page from home during the service.</p>
+    <p>These are real screenshots from the local development app, using its sample family and a demo service. The names and claim codes are demo data.</p>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/vkids/guardian-claim-codes.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View the guardian claim codes in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/vkids/guardian-claim-codes.png' | relative_url }}" width="1280" height="1362" alt="Guardian confirmation page showing Ramon and Pia’s classroom assignments, QR and short claim codes, and Maria Guardian as the authorized pickup person." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>Two children checked in, with a separate claim code for each. Local demo data.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="study-section" aria-labelledby="challenge-title">
+    <h2 id="challenge-title">the challenge</h2>
+    <p>Sunday check-in is only the beginning. Volunteers also need to know which classroom a child belongs in, who can collect them, and whether that pickup has already happened.</p>
+    <p>The workflow connects those decisions across the guardian’s phone, the check-in desk, and the release station. The goal was to keep the information available when people need it, while keeping the physical handoff in a volunteer’s hands.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">one family, one service at a time</h2>
+    <ol class="study-flow">
+      <li><strong>Select</strong><span>Choose the service and children attending.</span></li>
+      <li><strong>Review</strong><span>Set pickup permissions and check the details.</span></li>
+      <li><strong>Check in</strong><span>Record attendance and issue eligible claim codes.</span></li>
+      <li><strong>Pick up</strong><span>A volunteer verifies the recipient and confirms release.</span></li>
+    </ol>
+    <p>Families enroll once, then check in for each service they attend. The guardian flow asks one question at a time: which children are coming, who else may pick them up, and whether anyone must not. Nothing is submitted until the review step.</p>
+    <p>Classrooms come from each child’s age on the service date. Only Pre-school and Primary children receive claim codes; Nursery/Toddler and Pre-teen attendance follow their own closing rules. Volunteers can also help a family check in at the desk.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="product-title">
+    <h2 id="product-title">inside the product</h2>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/vkids/select-children.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View child selection in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/vkids/select-children.png' | relative_url }}" width="1280" height="900" alt="Check-in screen with Ramon and Pia selected, and age-group guidance explaining why Nursery and Pre-teen children do not receive claim codes." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>The first step: choose who is coming in. Local demo family.</span></figcaption>
+    </figure>
+    <p>At pickup, the volunteer can enter a short code, follow its QR link, or find a child when the code is unavailable. Each route leads to the same release record and confirmation rules.</p>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/vkids/release-verification.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View release verification in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/vkids/release-verification.png' | relative_url }}" width="1280" height="987" alt="Release station showing Ramon’s active PR-F6P code, authorized guardian, recipient name field, and an explicit Confirm release button above the waiting queue." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>The same PR-F6P code from the guardian’s screen, ready for a volunteer to verify. Release has not been confirmed in this screenshot.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="study-section" aria-labelledby="decisions-title">
+    <h2 id="decisions-title">the decisions behind it</h2>
+    <h3>keep pickup permissions close to the handoff</h3>
+    <p>Family guardians are allowed to pick up unless excluded. Additional pickup people and exclusions belong to that service’s check-in, and only the guardian who checked the child in can change those lists mid-service.</p>
+    <p>The release screen gives the volunteer the context to verify the person in front of them. The server blocks a recipient whose normalized name matches an excluded person. That name check supports the volunteer’s verification; it cannot establish someone’s identity on its own. An unannounced pickup requires a note recording the guardian’s verbal confirmation.</p>
+    <h3>make a release happen once</h3>
+    <p>Two volunteers might open the same claim code. Disabling a button would not resolve that race, so the database only allows an active code to become used once. That change, the attendance update, the release record, and its audit entry happen in one transaction.</p>
+    <p>A second confirmation is refused and can show the existing release details. The record keeps who received the child, who confirmed it, and how the code was verified.</p>
+    <h3>keep notifications behind the handoff</h3>
+    <p>After a release commits, the app updates the classroom pickup board and leadership dashboard, adds a banner for the dropping-off guardian, and queues a Web Push notification. Push delivery is best effort. The physical handoff at the desk remains the authoritative confirmation.</p>
+    <h3>give each church its own boundary</h3>
+    <p>Each church is resolved from its hostname, with church-scoped accounts, sessions, families, services, and claim-code lookups. This makes the church part of the request’s context instead of a choice passed in by a form.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="outcome-title">
+    <h2 id="outcome-title">what this makes possible</h2>
+    <p>A family can move from enrollment to service check-in and keep its claim codes ready for pickup. Volunteers can assist at the desk, verify a recipient, and record the release, while teachers and leadership have views of the same attendance activity.</p>
+    <p>The implementation includes tests for check-in, release confirmation, pickup-list changes, and service closing. This case study describes the implemented workflow and a local demo; I haven’t measured queue times or operational outcomes.</p>
+    <p>My takeaway: the important work is in the handoffs. A clear next step for a parent, useful context for a volunteer, and a record that stays consistent all matter as much as getting a child checked in.</p>
+  </section>
+  <div class="study-end"><a href="{{ '/' | relative_url }}#case-studies">← back to case studies</a><a href="{{ '/' | relative_url }}#contact">talk about a project</a></div>
+</article>

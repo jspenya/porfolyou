@@ -138,6 +138,10 @@ Category navigation offers case studies, projects, and about me. Links are muted
 
 A full-width real screenshot sits in a fine bordered frame. Its link opens the original image. The project heading aligns title and metadata on the baseline with a 16px gap; mobile stacks them with an 8px gap. Project titles are rendered lowercase.
 
+### Case-study browse grid
+
+The homepage case studies use a two-column grid beside the category rail, inspired by the supplied Joseph Rex reference. Each preview has a lowercase project name, a 16:10 image area, one short summary, and a read-case-study link. Cards have a quiet `#f0ecd3` surface, 24px padding, and no shadow or border. The grid gap is 32px; at 640px and below it stacks with a 24px gap. Preview images use `object-fit: contain` to preserve the complete screenshot and link to the story. Full-size screenshot links and captions remain on the detail pages. Card titles are 24px Lora, summaries 16px DM Sans, and links 15px.
+
 ### Personal letter
 
 Plain paragraphs, a lowercase greeting, and a simple signoff carry the voice. The quoted verse has rules above and below, 32px vertical margin, and 24px vertical padding. Citation text remains upright, with an ordinary text link.
