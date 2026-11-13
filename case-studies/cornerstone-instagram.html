@@ -1,0 +1,92 @@
+---
+layout: default
+title: "Cornerstone: from product to Instagram post"
+description: "How I built an AI content workflow in a Rails ecommerce admin: product-aware image generation, captions, human review, and Instagram publishing."
+permalink: /case-studies/cornerstone-instagram/
+---
+<article class="study-detail">
+  <header class="study-intro">
+    <a href="{{ '/' | relative_url }}#case-studies">← all case studies</a>
+    <p class="study-eyebrow">Cornerstone · ecommerce content automation</p>
+    <h1>from product to instagram post</h1>
+    <p class="hero__summary">Turning a product catalog and a creative brief into an image, a caption, and a reviewable Instagram draft.</p>
+    <dl class="study-facts">
+      <div><dt>my contribution</dt><dd>Rails workflow, AI generation, and publishing integration</dd></div>
+      <div><dt>built with</dt><dd>Ruby on Rails, Spree, OpenAI, Active Job, Active Storage, Meta Graph API</dd></div>
+    </dl>
+  </header>
+
+  <section class="study-section" aria-labelledby="examples-title">
+    <h2 id="examples-title">out in the world</h2>
+    <p>Three actual posts from Cornerstone Team Sports’ Instagram account. Each screenshot shows the published image alongside its caption. Open any screenshot for a closer look, or follow the link to the original post.</p>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/cornerstone/gatorade-bottle.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View one bottle. ready when you are screenshot in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/cornerstone/gatorade-bottle.png' | relative_url }}" width="1340" height="975" alt="Instagram post featuring a green Gatorade squeeze bottle held against a sunlit sky, with the published caption alongside it." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>One bottle. Ready when you are.</span> <a href="https://www.instagram.com/p/DUGRSkSgYG5/" target="_blank" rel="noopener noreferrer">view post on Instagram<span class="sr-only"> (opens in a new tab)</span></a></figcaption>
+    </figure>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View preseason fueling, ready for the sideline screenshot in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/cornerstone/preseason-fueling.png' | relative_url }}" width="1643" height="1022" alt="Instagram post showing Gatorade bottles, protein bars, shakes, and energy chews beside a football practice field, with its caption and hashtags." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>Preseason fueling, ready for the sideline.</span> <a href="https://www.instagram.com/p/DZCpI5dFtx5/" target="_blank" rel="noopener noreferrer">view post on Instagram<span class="sr-only"> (opens in a new tab)</span></a></figcaption>
+    </figure>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/cornerstone/sideline-hydration.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View a roster-ready hydration package screenshot in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/cornerstone/sideline-hydration.png' | relative_url }}" width="1643" height="1023" alt="Instagram post showing a Gatorade fueling package on a sideline table beside a sports field, with its published caption and hashtags." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>A roster-ready hydration package.</span> <a href="https://www.instagram.com/p/DY3JF9XmAVh/" target="_blank" rel="noopener noreferrer">view post on Instagram<span class="sr-only"> (opens in a new tab)</span></a></figcaption>
+    </figure>
+  </section>
+
+  <section class="study-section" aria-labelledby="challenge-title">
+    <h2 id="challenge-title">the challenge</h2>
+    <p>A product already has a name, an image, and a place in the store’s catalog. Turning it into social content still means deciding what to say, creating a visual, checking the details, and getting the post onto Instagram.</p>
+    <p>I wanted to bring those steps into Cornerstone’s existing ecommerce admin, so the team could work from the products they already manage and keep control over what goes live.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">one brief, a reviewable draft</h2>
+    <p>The workflow starts with a few concrete choices: the store, campaign goal, visual mood, composition, and products to feature.</p>
+    <ol class="study-flow">
+      <li><strong>Brief</strong><span>Choose products and creative direction.</span></li>
+      <li><strong>Generate</strong><span>Create an image, caption, and hashtags.</span></li>
+      <li><strong>Review</strong><span>Edit the copy or regenerate either part.</span></li>
+      <li><strong>Publish</strong><span>Send the reviewed draft to Instagram.</span></li>
+    </ol>
+    <p>Generation runs in a background job and saves the result as a draft. The image and caption stay together in the admin, with an explicit publish action after review.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="admin-title">
+    <h2 id="admin-title">inside the admin</h2>
+    <p>The preseason fueling post above, as it appears in Spree’s Content Creation screen. The image, caption, creative brief, publication status, prompt, and model details are kept together in one record.</p>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/cornerstone/spree-content-admin.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View the same preseason post inside spree screenshot in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/cornerstone/spree-content-admin.png' | relative_url }}" width="1389" height="807" alt="Spree Content Creation admin showing the preseason image, caption, creative brief, published status, assembled prompt, and AI metadata." loading="lazy" decoding="async">
+      </a>
+      <figcaption><span>The same preseason post inside Spree.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="study-section" aria-labelledby="decisions-title">
+    <h2 id="decisions-title">the decisions behind it</h2>
+    <h3>give the model product context</h3>
+    <p>The prompt combines brand voice, audience, seasonal context, campaign goal, and product details. Catalog images serve as visual references, with instructions to preserve packaging, labels, colors, and proportions while composing a new scene. A separate logo overlay adds store branding after generation.</p>
+    <p>Those references guide the result; they do not guarantee accurate packaging or text. Human review remains part of the workflow.</p>
+    <h3>let the team keep what works</h3>
+    <p>A good image should not need to be discarded because the caption needs another pass. Image and caption regeneration are separate actions, and the team can edit the caption and hashtags or replace the image before publishing.</p>
+    <h3>treat publishing as its own step</h3>
+    <p>The publishing service checks that the draft has an image and a caption, provides Meta with a publicly reachable image URL, creates a media container, and requests publication. If Meta is still processing the image, it retries that publication request a bounded number of times.</p>
+    <p>Successful publication saves the Instagram media ID and timestamp. Failures are recorded on the draft so the admin can see what went wrong.</p>
+    <h3>keep the work traceable</h3>
+    <p>The draft retains its products, assembled prompt, generation settings, model information, and timing metadata. Separate services handle creation, regeneration, and publication, making each part easier to inspect and test.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="outcome-title">
+    <h2 id="outcome-title">what this makes possible</h2>
+    <p>The team can move from catalog products to a generated visual and post description, refine the draft, and publish to Instagram from the same admin. The repetitive content preparation is automated while the final editorial decision stays with a person.</p>
+    <p>The implementation includes specs for draft creation, independent image and caption regeneration, publishing validation, and Meta API error handling. I’m describing the delivered workflow here; I haven’t measured time savings or engagement lift.</p>
+    <p>My takeaway: the useful part of this AI feature is the whole path around generation—real product context, a draft someone can change, and a clear handoff to publishing.</p>
+  </section>
+  <div class="study-end"><a href="{{ '/' | relative_url }}#case-studies">← back to case studies</a><a href="{{ '/' | relative_url }}#contact">talk about a project</a></div>
+</article>

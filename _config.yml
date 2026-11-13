@@ -36,3 +36,5 @@ exclude:
   - PRODUCT.md
   - DESIGN.md
   - CONTEXT.md
+  - AGENTS.md
+  - CASE_STUDIES.md

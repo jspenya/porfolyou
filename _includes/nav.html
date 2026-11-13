@@ -1,9 +1,10 @@
 <nav class="nav" aria-label="Main navigation">
-  <a class="nav__name" href="#hero">steph peña</a>
+  <a class="nav__name" href="{{ '/' | relative_url }}#hero">steph peña</a>
   <div class="nav__links">
-    <a href="#work">work</a>
-    <a href="#approach">a little about me</a>
+    <a href="{{ '/' | relative_url }}#work">work</a>
+    <a href="{{ '/' | relative_url }}#case-studies">case studies</a>
+    <a href="{{ '/' | relative_url }}#approach">a little about me</a>
     <a href="{{ '/resume/' | relative_url }}">résumé</a>
-    <a href="#contact">say hello</a>
+    <a href="{{ '/' | relative_url }}#contact">say hello</a>
   </div>
 </nav>
