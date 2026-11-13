@@ -7,6 +7,6 @@
 
 - Prepare changes on a `feat/`, `fix/`, `chore/`, or `docs/` branch and present them for review.
 - Use the `caveman-commit` skill whenever committing changes.
-- Obtain explicit authorization before any push, merge into `main`, production deployment, production configuration change, or commit directly to `main`.
-- Local implementation requests do not authorize publication. Authorization is specific to the action and destination. Before a push, check whether it triggers deployment and obtain explicit deployment authorization if it does.
+- Obtain explicit authorization before any push, merge into `main`, production configuration change, or commit directly to `main`.
+- Local implementation requests do not authorize publication. Authorization is specific to the action and destination. An authorized push includes any deployment it automatically triggers; do not request separate deployment authorization.
 - Report local edits, commits, pushes, and deployments separately. Verify where instructions were saved before claiming they persist.
