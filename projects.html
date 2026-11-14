@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Projects
+title: Personal projects
 portfolio_section: projects
-description: "Selected Ruby on Rails projects: ReachBoost and Jubilee."
+description: "Personal Ruby on Rails projects: Jubilee, Pickle, and Fitness."
 permalink: /projects/
 ---
 <div class="portfolio-story">
@@ -11,31 +11,13 @@ permalink: /projects/
     {% include browse-nav.html %}
     <section class="projects section-block" id="projects" aria-labelledby="projects-title">
       <header class="section-heading" data-reveal>
-        <h2 id="projects-title">projects</h2>
+        <h2 id="projects-title">personal projects</h2>
+        <p>things i build for everyday life, from keeping track of money to finding time on the court and looking after my health.</p>
       </header>
 
-      <article class="case-study" id="reachboost" data-project="reachboost" data-reveal>
-        <a class="project-image" href="{{ '/assets/reachboost-sequence.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View reachboost screenshot in full size (opens in a new tab)">
-          <img src="{{ '/assets/reachboost-sequence.png' | relative_url }}" width="2139" height="1195" alt="ReachBoost campaign builder with branching outreach steps" fetchpriority="high">
-        </a>
-        <div class="case-study__heading">
-          <h3>ReachBoost</h3>
-          <p>Rails developer · 2026 to present</p>
-        </div>
-        <p class="case-study__claim">Agency outbound has a lot of moving parts. I help make them feel like one product.</p>
-        <p>I build and maintain the Rails application behind multi-account campaigns, team collaboration, whitelabel workflows, and LinkedIn account onboarding.</p>
-        <ul class="plain-list">
-          <li>Campaign builder and automated outreach sequences</li>
-          <li>Multi-client account and sender management</li>
-          <li>Sales Navigator and LinkedIn Basic account linking</li>
-        </ul>
-        <p class="project-more">more views: <a href="{{ '/assets/reachboost-product.png' | relative_url }}" target="_blank" rel="noopener noreferrer">dashboard</a> · <a href="{{ '/assets/reachboost-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer">homepage</a></p>
-        <a href="https://reachboost.io/" target="_blank" rel="noopener noreferrer">visit reachboost</a>
-      </article>
-
-      <article class="case-study case-study--light" id="jubilee" data-project="jubilee" data-reveal>
+      <article class="case-study" id="jubilee" data-project="jubilee" data-reveal>
         <a class="project-image" href="{{ '/assets/jubilee-transactions.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View jubilee screenshot in full size (opens in a new tab)">
-          <img src="{{ '/assets/jubilee-transactions.png' | relative_url }}" width="1783" height="1140" alt="Jubilee transaction ledger with income, expenses, and account balances" loading="lazy">
+          <img src="{{ '/assets/jubilee-transactions.png' | relative_url }}" width="1783" height="1140" alt="Jubilee transaction ledger with income, expenses, and account balances" fetchpriority="high">
         </a>
         <div class="case-study__heading">
           <h3>Jubilee</h3>
@@ -50,6 +32,36 @@ permalink: /projects/
         </ul>
         <p class="project-more">more views: <a href="{{ '/assets/jubilee-public.png' | relative_url }}" target="_blank" rel="noopener noreferrer">sign-in</a> · <a href="{{ '/assets/jubilee-breakdown.png' | relative_url }}" target="_blank" rel="noopener noreferrer">expense breakdown</a></p>
         <a href="https://jubilee.one-steph-closer.com/" target="_blank" rel="noopener noreferrer">open jubilee</a>
+      </article>
+
+      <article class="case-study" id="pickle" data-project="pickle" data-reveal>
+        <div class="case-study__heading">
+          <h3>Pickle</h3>
+          <p>Creator and developer</p>
+        </div>
+        <p class="case-study__claim">find a place to play without checking every venue one by one.</p>
+        <p>i built pickle to bring pickleball court availability in cagayan de oro into one search. choose when you want to play, see the matching slots, then head to the venue’s own booking platform to reserve a court.</p>
+        <ul class="plain-list">
+          <li>Search availability across venues by date and preferred time</li>
+          <li>See matching court slots and when availability was checked</li>
+          <li>Complete the booking directly with the venue</li>
+        </ul>
+        <a href="https://pickle.one-steph-closer.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Pickle (opens in a new tab)">open pickle</a>
+      </article>
+
+      <article class="case-study" id="fitness" data-project="fitness" data-reveal>
+        <div class="case-study__heading">
+          <h3>Fitness</h3>
+          <p>Creator and developer</p>
+        </div>
+        <p class="case-study__claim">a place to keep track of food, training, and progress.</p>
+        <p>i built fitness to bring the everyday pieces of looking after my health together. it keeps meal logging, workout plans, and weigh-ins in one place, with a daily view to help me keep track.</p>
+        <ul class="plain-list">
+          <li>Log meals and nutrition alongside daily check-ins</li>
+          <li>Plan the week and record workouts with reusable templates</li>
+          <li>Track weigh-ins and weight goals over time</li>
+        </ul>
+        <a href="https://fitness.one-steph-closer.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Fitness (opens in a new tab)">open fitness</a>
       </article>
     </section>
 
