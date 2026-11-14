@@ -1,0 +1,58 @@
+---
+layout: default
+title: "CleverERP: reusable screens that load in sections"
+description: "A frontend refactor that brings more consistent interactions and less repeated code to CleverERP."
+permalink: /case-studies/clevererp-async-sections/
+---
+<article class="study-detail">
+  <header class="study-intro">
+    <a href="{{ '/' | relative_url }}#case-studies">← all case studies</a>
+    <p class="study-eyebrow">CleverERP · frontend architecture</p>
+    <h1>reusable screens that load in sections</h1>
+    <p class="hero__summary">I refactored CleverERP’s frontend around a reusable approach to everyday interactions, helping screens load in stages and keeping repeated code easier to maintain.</p>
+    <dl class="study-facts">
+      <div><dt>my contribution</dt><dd>Frontend architecture and refactoring</dd></div>
+      <div><dt>built with</dt><dd>Ruby on Rails, Hotwire</dd></div>
+    </dl>
+  </header>
+
+  <section class="study-section" aria-labelledby="challenge-title">
+    <h2 id="challenge-title">the challenge</h2>
+    <p>In an ERP, a lot of daily work happens in lists: finding a record, narrowing the results, opening a form, and checking what changed. CleverERP has those interactions across users, purchasing, and its product and process library.</p>
+    <p>I wanted a consistent experience across those screens and less repeated work behind them. As the application grew, building each interaction separately meant more places to maintain the same behavior.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">keep the work moving</h2>
+    <p>The page takes shape while its tables load asynchronously. From there, people can narrow a list, work with a record, and see their changes reflected without reloading the whole screen.</p>
+    <p>My goal was to make those everyday interactions feel familiar wherever someone was working in the application.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="admin-title">
+    <h2 id="admin-title">inside the process library</h2>
+    <p>The Process Library is one place this approach comes together. People can narrow a list of options and manage records from the same screen.</p>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/clevererp/library-options-filtered.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View the CleverERP Library Options screenshot in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/clevererp/library-options-filtered.png' | relative_url }}" width="1280" height="720" alt="CleverERP Library Options filtered to Kitchen, showing active filter controls, option rows, sortable columns, and edit and archive actions." loading="lazy" decoding="async">
+      </a>
+      <figcaption>Library Options, narrowed to kitchen items.</figcaption>
+    </figure>
+  </section>
+
+  <section class="study-section" aria-labelledby="decisions-title">
+    <h2 id="decisions-title">the decisions behind it</h2>
+    <h3>make common interactions reusable</h3>
+    <p>I brought repeated frontend behavior into a shared approach, so improvements could carry across screens and new features could build on what was already there.</p>
+    <h3>let the page arrive in stages</h3>
+    <p>Tables load independently of the surrounding page. That lets the screen appear before all of its content is ready. I haven’t measured a before-and-after speed improvement.</p>
+    <h3>choose conventions that fit the product</h3>
+    <p>I took an opinionated approach within Rails, shaped around CleverERP’s recurring workflows. It gives the application a consistent foundation, with the tradeoff that developers need to learn and maintain those shared conventions.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="outcome-title">
+    <h2 id="outcome-title">what this makes possible</h2>
+    <p>The approach is used across user management, the Process Library, and purchasing. These screens share familiar interactions while still serving different kinds of work.</p>
+    <p>For me, the value of keeping code DRY is having fewer places to maintain the same behavior. This refactor gave CleverERP a more reusable foundation to build on as the product grows.</p>
+  </section>
+  <div class="study-end"><a href="{{ '/' | relative_url }}#case-studies">← back to case studies</a><a href="{{ '/' | relative_url }}#contact">talk about a project</a></div>
+</article>
