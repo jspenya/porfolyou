@@ -1,0 +1,61 @@
+---
+layout: default
+title: "Lampstand: a focused home for email campaigns"
+description: "An email campaign tool built to move beyond an underused Zoho CRM, with simpler contacts, separate business workspaces, and controlled sending."
+permalink: /case-studies/lampstand/
+---
+<article class="study-detail">
+  <header class="study-intro">
+    <a href="{{ '/' | relative_url }}#case-studies">← all case studies</a>
+    <p class="study-eyebrow">Lampstand · email campaigns</p>
+    <h1>a focused home for email campaigns</h1>
+    <p class="hero__summary">I built Lampstand with a clear goal: retire Zoho CRM and give our team a tool built around the email campaigns we actually use it for.</p>
+    <dl class="study-facts">
+      <div><dt>my contribution</dt><dd>Rails application, contact migration, and campaign workflow</dd></div>
+      <div><dt>built with</dt><dd>Ruby on Rails, PostgreSQL, Hotwire, Solid Queue</dd></div>
+    </dl>
+  </header>
+
+  <section class="study-section" aria-labelledby="challenge-title">
+    <h2 id="challenge-title">the challenge</h2>
+    <p>We were using Zoho CRM for email campaigns without making much use of the wider CRM. I wanted to bring contact management and campaign sending into a smaller tool, shaped around our actual workflow and built to reduce that dependency.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">from contacts to campaigns</h2>
+    <ol class="study-flow">
+      <li><strong>Organize</strong><span>Bring in contacts and build reusable audiences.</span></li>
+      <li><strong>Compose</strong><span>Prepare a campaign for the chosen business.</span></li>
+      <li><strong>Review</strong><span>Check the audience and send a test email.</span></li>
+      <li><strong>Send</strong><span>Start now or schedule, then follow progress.</span></li>
+    </ol>
+    <p>The team chooses what goes out and when. Lampstand handles the background work, with opt-outs and sending controls built into the workflow.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="admin-title">
+    <h2 id="admin-title">inside the app</h2>
+    <figure class="study-example">
+      <a class="project-image" href="{{ '/assets/case-studies/lampstand/contacts-demo.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View Lampstand’s demo Contacts screen in full size (opens in a new tab)">
+        <img src="{{ '/assets/case-studies/lampstand/contacts-demo.png' | relative_url }}" width="1440" height="1005" alt="Lampstand’s Contacts screen showing a workspace switcher, saved views, and six fictional contacts with organizations and email eligibility." loading="lazy" decoding="async">
+      </a>
+      <figcaption>Contact management inside Lampstand. Captured locally with fictional contacts, organizations, and example.com addresses; no real contact details are shown.</figcaption>
+    </figure>
+  </section>
+
+  <section class="study-section" aria-labelledby="decisions-title">
+    <h2 id="decisions-title">the decisions behind it</h2>
+    <h3>simplify the contact model</h3>
+    <p>I kept prospects and customers in one contact model instead of carrying over Zoho’s lead-conversion workflow. Imports and an on-demand sync for new Zoho contacts support a gradual transition.</p>
+    <h3>keep each business separate</h3>
+    <p>Separate workspaces keep each business’s contacts, campaigns, sender identity, and opt-outs together. That gives the team one application without mixing their audiences.</p>
+    <h3>separate campaign work from delivery</h3>
+    <p>I used Rails and PostgreSQL for the application, with Solid Queue handling sends in the background and an external email service handling delivery. This keeps longer sends out of the staff interface. Sending controls favor avoiding duplicate emails over automatically retrying uncertain submissions.</p>
+  </section>
+
+  <section class="study-section" aria-labelledby="outcome-title">
+    <h2 id="outcome-title">what this makes possible</h2>
+    <p>Lampstand brings contact organization, campaign preparation, scheduling, and submission tracking into one focused application. Zoho import and sync support the move toward retiring the CRM.</p>
+    <p>My takeaway: a replacement tool can be more useful by staying close to the work the team actually needs.</p>
+  </section>
+  <div class="study-end"><a href="{{ '/' | relative_url }}#case-studies">← back to case studies</a><a href="{{ '/' | relative_url }}#contact">talk about a project</a></div>
+</article>
